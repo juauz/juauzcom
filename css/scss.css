@@ -1,0 +1,854 @@
+/* line 10, D:/personal/juauzcom/scss/scss.scss */
+*::selection {
+  background-color: #FFFF33;
+}
+
+@keyframes woweffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 45%;
+  }
+  100% {
+    width: 43%;
+  }
+}
+
+@keyframes dropvertical {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes rots {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes rots2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(67.5deg);
+  }
+}
+
+@keyframes closeeffect {
+  0% {
+    width: 43%;
+  }
+  50% {
+    width: 45%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes closevertical {
+  0% {
+    height: 100%;
+  }
+  90% {
+    height: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes goaway {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 106, D:/personal/juauzcom/scss/scss.scss */
+.upholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #181A27;
+  display: flex;
+}
+
+/* line 113, D:/personal/juauzcom/scss/scss.scss */
+.upholder.gobege {
+  color: #FFEFE5;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 118, D:/personal/juauzcom/scss/scss.scss */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #181A27 inset;
+  -webkit-text-fill-color: #FFEFE5 !important;
+}
+
+/* line 123, D:/personal/juauzcom/scss/scss.scss */
+#side-menu.closeeffect {
+  animation: closevertical 1s forwards;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 123, D:/personal/juauzcom/scss/scss.scss */
+  #side-menu.closeeffect {
+    animation: closeeffect 1s forwards;
+  }
+}
+
+/* line 131, D:/personal/juauzcom/scss/scss.scss */
+.form-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* line 138, D:/personal/juauzcom/scss/scss.scss */
+body {
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  background-color: #FFEFE5;
+}
+
+@media screen and (min-width: 620px) {
+  /* line 138, D:/personal/juauzcom/scss/scss.scss */
+  body {
+    background-image: url("http://tanner.juauz.com/imgs/illustration2.svg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: -250% 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 138, D:/personal/juauzcom/scss/scss.scss */
+  body {
+    background-size: 90%;
+    background-position: 500% 28%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* line 138, D:/personal/juauzcom/scss/scss.scss */
+  body {
+    background-size: 65%;
+    background-position: 140% 30%;
+  }
+}
+
+/* line 164, D:/personal/juauzcom/scss/scss.scss */
+body.noscroll {
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 164, D:/personal/juauzcom/scss/scss.scss */
+  body.noscroll {
+    overflow-y: auto;
+  }
+}
+
+/* line 171, D:/personal/juauzcom/scss/scss.scss */
+.side-menu {
+  position: fixed;
+  background-color: #181A27;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 171, D:/personal/juauzcom/scss/scss.scss */
+  .side-menu {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* line 189, D:/personal/juauzcom/scss/scss.scss */
+.side-menu.drop {
+  animation: dropvertical 1.2s forwards;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 189, D:/personal/juauzcom/scss/scss.scss */
+  .side-menu.drop {
+    animation: drop 1.2s forwards;
+  }
+}
+
+/* line 198, D:/personal/juauzcom/scss/scss.scss */
+.side-menu-content {
+  width: 80%;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 198, D:/personal/juauzcom/scss/scss.scss */
+  .side-menu-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* line 209, D:/personal/juauzcom/scss/scss.scss */
+#side-menu-content.woweffect {
+  animation: woweffect 1.8s;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 209, D:/personal/juauzcom/scss/scss.scss */
+  #side-menu-content.woweffect {
+    animation: woweffect 0.8s;
+  }
+}
+
+/* line 217, D:/personal/juauzcom/scss/scss.scss */
+#side-menu-content.goaway {
+  animation: goaway 0.6s forwards;
+}
+
+/* line 221, D:/personal/juauzcom/scss/scss.scss */
+.top-side-menu,
+.bot-side-menu {
+  width: 100%;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* line 232, D:/personal/juauzcom/scss/scss.scss */
+.top-side-menu #close {
+  z-index: 0;
+  width: 30px;
+  height: 13px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-right: 9%;
+}
+
+/* line 241, D:/personal/juauzcom/scss/scss.scss */
+.top-side-menu #close span {
+  z-index: 200;
+  transition: 0.3s all ease-in-out;
+  height: 3px;
+  background-color: #FFEFE5;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 250, D:/personal/juauzcom/scss/scss.scss */
+.top-side-menu #close span:nth-child(1) {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+/* line 254, D:/personal/juauzcom/scss/scss.scss */
+.top-side-menu #close span:nth-child(2) {
+  transform: rotate(-135deg);
+}
+
+/* line 259, D:/personal/juauzcom/scss/scss.scss */
+#span1.ratata {
+  animation: rots 1s forwards;
+}
+
+/* line 263, D:/personal/juauzcom/scss/scss.scss */
+#span1.ratataback {
+  animation: rots2 1s forwards;
+}
+
+/* line 268, D:/personal/juauzcom/scss/scss.scss */
+h1, a.case-link {
+  font-family: "Abril Fatface", cursive;
+  position: relative;
+  color: #181A27;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+/* line 278, D:/personal/juauzcom/scss/scss.scss */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* line 284, D:/personal/juauzcom/scss/scss.scss */
+.form-field {
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 0;
+}
+
+/* line 290, D:/personal/juauzcom/scss/scss.scss */
+#form-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 16px;
+  color: #181A27;
+  font-weight: 800;
+  background-color: #FFEFE5;
+  position: relative;
+  border-radius: 2px;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+
+/* line 306, D:/personal/juauzcom/scss/scss.scss */
+#form-button:disabled {
+  opacity: .1;
+  pointer-events: none;
+  transition: 0.5s all ease;
+}
+
+/* line 314, D:/personal/juauzcom/scss/scss.scss */
+.form-style {
+  background-color: #181A27;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 2px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #FFEFE5;
+}
+
+/* line 323, D:/personal/juauzcom/scss/scss.scss */
+.form-style:focus {
+  outline: none;
+}
+
+/* line 328, D:/personal/juauzcom/scss/scss.scss */
+.form-style.clicked {
+  border-bottom: 1px solid white;
+  transition: 0.5s all ease;
+}
+
+/* line 333, D:/personal/juauzcom/scss/scss.scss */
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* line 338, D:/personal/juauzcom/scss/scss.scss */
+#work-title {
+  color: #FFEFE5;
+}
+
+/* line 342, D:/personal/juauzcom/scss/scss.scss */
+a.menu-link, a.hire-link, a.normal-link, a.normal-link-topic, a.hire-link-topic {
+  font-family: "Abril Fatface", cursive;
+  color: #181A27;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+a.desc-link {
+  font-family: "Abril Fatface", cursive;
+  color: #181A27;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* line 348, D:/personal/juauzcom/scss/scss.scss */
+a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1), a.menu-link:nth-child(2), a.hire-link:nth-child(2), a.normal-link:nth-child(2), a.normal-link-topic:nth-child(2), a.hire-link-topic:nth-child(2), a.menu-link:nth-child(3), a.hire-link:nth-child(3), a.normal-link:nth-child(3), a.normal-link-topic:nth-child(3), a.hire-link-topic:nth-child(3), a.menu-link:nth-child(4), a.hire-link:nth-child(4), a.normal-link:nth-child(4), a.normal-link-topic:nth-child(4), a.hire-link-topic:nth-child(4), a.menu-link:nth-child(5), a.hire-link:nth-child(5), a.normal-link:nth-child(5), a.normal-link-topic:nth-child(5), a.hire-link-topic:nth-child(5), a.menu-link:nth-child(6), a.hire-link:nth-child(6), a.normal-link:nth-child(6), a.normal-link-topic:nth-child(6), a.hire-link-topic:nth-child(6) {
+  margin: 0 45px 20px 0;
+  text-align: center;
+}
+
+/* line 359, D:/personal/juauzcom/scss/scss.scss */
+a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1) {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 430px) {
+  /* line 364, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1), a.menu-link:nth-child(2), a.hire-link:nth-child(2), a.normal-link:nth-child(2), a.normal-link-topic:nth-child(2), a.hire-link-topic:nth-child(2), a.menu-link:nth-child(3), a.hire-link:nth-child(3), a.normal-link:nth-child(3), a.normal-link-topic:nth-child(3), a.hire-link-topic:nth-child(3), a.menu-link:nth-child(4), a.hire-link:nth-child(4), a.normal-link:nth-child(4), a.normal-link-topic:nth-child(4), a.hire-link-topic:nth-child(4), a.menu-link:nth-child(5), a.hire-link:nth-child(5), a.normal-link:nth-child(5), a.normal-link-topic:nth-child(5), a.hire-link-topic:nth-child(5), a.menu-link:nth-child(6), a.hire-link:nth-child(6), a.normal-link:nth-child(6), a.normal-link-topic:nth-child(6), a.hire-link-topic:nth-child(6) {
+    margin: 0 100px 20px 0;
+    text-align: center;
+  }
+  /* line 375, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1) {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* line 381, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1), a.menu-link:nth-child(2), a.hire-link:nth-child(2), a.normal-link:nth-child(2), a.normal-link-topic:nth-child(2), a.hire-link-topic:nth-child(2), a.menu-link:nth-child(3), a.hire-link:nth-child(3), a.normal-link:nth-child(3), a.normal-link-topic:nth-child(3), a.hire-link-topic:nth-child(3), a.menu-link:nth-child(4), a.hire-link:nth-child(4), a.normal-link:nth-child(4), a.normal-link-topic:nth-child(4), a.hire-link-topic:nth-child(4), a.menu-link:nth-child(5), a.hire-link:nth-child(5), a.normal-link:nth-child(5), a.normal-link-topic:nth-child(5), a.hire-link-topic:nth-child(5), a.menu-link:nth-child(6), a.hire-link:nth-child(6), a.normal-link:nth-child(6), a.normal-link-topic:nth-child(6), a.hire-link-topic:nth-child(6) {
+    margin: 0 180px 20px 0;
+    text-align: center;
+  }
+  /* line 392, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1) {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  /* line 342, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link, a.hire-link, a.normal-link, a.normal-link-topic, a.hire-link-topic {
+    font-size: 16px;
+    font-weight: 100;
+    position: relative;
+  }
+  /* line 403, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:nth-child(1), a.hire-link:nth-child(1), a.normal-link:nth-child(1), a.normal-link-topic:nth-child(1), a.hire-link-topic:nth-child(1), a.menu-link:nth-child(2), a.hire-link:nth-child(2), a.normal-link:nth-child(2), a.normal-link-topic:nth-child(2), a.hire-link-topic:nth-child(2), a.menu-link:nth-child(3), a.hire-link:nth-child(3), a.normal-link:nth-child(3), a.normal-link-topic:nth-child(3), a.hire-link-topic:nth-child(3), a.menu-link:nth-child(4), a.hire-link:nth-child(4), a.normal-link:nth-child(4), a.normal-link-topic:nth-child(4), a.hire-link-topic:nth-child(4), a.menu-link:nth-child(5), a.hire-link:nth-child(5), a.normal-link:nth-child(5), a.normal-link-topic:nth-child(5), a.hire-link-topic:nth-child(5), a.menu-link:nth-child(6), a.hire-link:nth-child(6), a.normal-link:nth-child(6), a.normal-link-topic:nth-child(6), a.hire-link-topic:nth-child(6) {
+    margin: 0;
+  }
+  /* line 412, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:before, a.hire-link:before, a.normal-link:before, a.normal-link-topic:before, a.hire-link-topic:before {
+    transition: 0.3s all ease;
+    content: '';
+    background-color: #181A27;
+    width: 100%;
+    height: 0;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  /* line 424, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:hover, a.hire-link:hover, a.normal-link:hover, a.normal-link-topic:hover, a.hire-link-topic:hover {
+    color: #FFEFE5;
+  }
+  /* line 427, D:/personal/juauzcom/scss/scss.scss */
+  a.menu-link:hover:before, a.hire-link:hover:before, a.normal-link:hover:before, a.normal-link-topic:hover:before, a.hire-link-topic:hover:before {
+    top: 0;
+    height: 100%;
+  }
+}
+
+/* line 435, D:/personal/juauzcom/scss/scss.scss */
+a.hire-link, a.normal-link, a.normal-link-topic, a.hire-link-topic {
+  color: #162BF4;
+  cursor: pointer;
+}
+
+/* line 440, D:/personal/juauzcom/scss/scss.scss */
+a.hire-link:before, a.normal-link:before, a.normal-link-topic:before, a.hire-link-topic:before {
+  background-color: #162BF4;
+}
+
+/* line 445, D:/personal/juauzcom/scss/scss.scss */
+a.normal-link {
+  text-decoration: none;
+  color: #181A27;
+}
+
+/* line 449, D:/personal/juauzcom/scss/scss.scss */
+a.normal-link:before {
+  background-color: #181A27;
+}
+
+/* line 454, D:/personal/juauzcom/scss/scss.scss */
+a.normal-link-topic {
+  text-decoration: none;
+  color: #181A27;
+  font-size: 16px;
+}
+
+/* line 460, D:/personal/juauzcom/scss/scss.scss */
+a.normal-link-topic:before {
+  background-color: #181A27;
+}
+
+/* line 465, D:/personal/juauzcom/scss/scss.scss */
+a.hire-link-topic {
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 472, D:/personal/juauzcom/scss/scss.scss */
+  #medium,
+  #linkedin,
+  #behance,
+  #dribbble,
+  #twitter {
+    margin-right: 30px;
+  }
+}
+
+/* line 483, D:/personal/juauzcom/scss/scss.scss */
+#designer {
+  width: 100%;
+}
+
+@media screen and (min-width: 620px) {
+  /* line 483, D:/personal/juauzcom/scss/scss.scss */
+  #designer {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  /* line 483, D:/personal/juauzcom/scss/scss.scss */
+  #designer {
+    width: 100%;
+  }
+}
+
+/* line 493, D:/personal/juauzcom/scss/scss.scss */
+a.case-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  max-width: 250px;
+  padding: 12px 6px;
+  border: 1.5px solid #162BF4;
+  border-radius: 2px;
+  text-decoration: none;
+  position: relative;
+  color: #162BF4;
+  transition: 0.5s all ease;
+}
+
+/* line 508, D:/personal/juauzcom/scss/scss.scss */
+a.case-link:before {
+  transition: 0.5s all ease-in-out;
+  content: '';
+  position: absolute;
+  background-color: #162BF4;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  height: 0;
+}
+
+/* line 521, D:/personal/juauzcom/scss/scss.scss */
+a.case-link:hover {
+  transition: 0.5s all ease-in-out;
+  color: #FFEFE5;
+}
+
+/* line 525, D:/personal/juauzcom/scss/scss.scss */
+a.case-link:hover:before {
+  transition: 0.2s all ease;
+  top: 0;
+  height: 100%;
+  opacity: 1;
+}
+
+/* line 534, D:/personal/juauzcom/scss/scss.scss */
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #181A27;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* line 541, D:/personal/juauzcom/scss/scss.scss */
+.link {
+  font-family: "Abril Fatface", cursive;
+  color: #162BF4;
+}
+
+/* line 546, D:/personal/juauzcom/scss/scss.scss */
+.section {
+  overflow-x: hidden;
+  padding: 0px 20px 0px 20px;
+}
+
+@media screen and (min-width: 430px) {
+  /* line 546, D:/personal/juauzcom/scss/scss.scss */
+  .section {
+    padding: 0px 50px 0px 50px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* line 546, D:/personal/juauzcom/scss/scss.scss */
+  .section {
+    padding: 0px 90px 0px 90px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  /* line 546, D:/personal/juauzcom/scss/scss.scss */
+  .section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 120px 0 120px;
+  }
+}
+
+/* line 565, D:/personal/juauzcom/scss/scss.scss */
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  animation: woweffect 2.5s;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 565, D:/personal/juauzcom/scss/scss.scss */
+  .navigation {
+    height: 166px;
+  }
+}
+
+/* line 579, D:/personal/juauzcom/scss/scss.scss */
+#menu-links {
+  z-index: 50;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  background-color: #FFEFE5;
+  width: 100%;
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 579, D:/personal/juauzcom/scss/scss.scss */
+  #menu-links {
+    display: flex;
+    justify-content: flex-end;
+    position: inherit;
+    flex-direction: row;
+    background-color: rgba(255, 239, 229, 0);
+  }
+}
+
+/* line 598, D:/personal/juauzcom/scss/scss.scss */
+.content {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 598, D:/personal/juauzcom/scss/scss.scss */
+  .content {
+    width: 50%;
+  }
+}
+
+/* line 606, D:/personal/juauzcom/scss/scss.scss */
+#section-2 {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  animation: woweffect 2s;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 606, D:/personal/juauzcom/scss/scss.scss */
+  #section-2 {
+    margin-top: 0;
+  }
+}
+
+/* line 620, D:/personal/juauzcom/scss/scss.scss */
+#logo {
+  height: 24px;
+}
+
+/* line 624, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon {
+  height: 16px;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 624, D:/personal/juauzcom/scss/scss.scss */
+  #menu-icon {
+    display: none;
+  }
+}
+
+/* line 632, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css {
+  z-index: 50;
+  width: 30px;
+  height: 13px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 639, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css span {
+  transition: 0.3s all ease-in-out;
+  height: 3px;
+  background-color: #181A27;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 647, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css span:nth-child(1) {
+  top: 0;
+}
+
+/* line 651, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css span:nth-child(2) {
+  top: 6px;
+  width: 70%;
+  right: 0;
+}
+
+/* line 657, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css span:nth-child(3) {
+  top: 12px;
+}
+
+@media screen and (min-width: 920px) {
+  /* line 632, D:/personal/juauzcom/scss/scss.scss */
+  #menu-icon-css {
+    display: none;
+  }
+}
+
+/* line 668, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css.rotate span:nth-child(1) {
+  transform: rotate(135deg);
+  top: 6px;
+}
+
+/* line 673, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css.rotate span:nth-child(2) {
+  opacity: 0;
+  transition: 0.1s all ease-in-out;
+}
+
+/* line 678, D:/personal/juauzcom/scss/scss.scss */
+#menu-icon-css.rotate span:nth-child(3) {
+  transform: rotate(-135deg);
+  top: 6px;
+}
+
+/* line 685, D:/personal/juauzcom/scss/scss.scss */
+.topic {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* line 692, D:/personal/juauzcom/scss/scss.scss */
+#topic1,
+#topic2 {
+  margin-bottom: 16px;
+}
+
+/* line 697, D:/personal/juauzcom/scss/scss.scss */
+.star {
+  height: 6px;
+  width: auto;
+  margin-right: 6px;
+}
+
+/* line 703, D:/personal/juauzcom/scss/scss.scss */
+.case-studies {
+  margin-top: 60px;
+}
+
+/* line 707, D:/personal/juauzcom/scss/scss.scss */
+a.casestudy {
+  width: 100px;
+  height: 50px;
+  background-color: blueviolet;
+}
+
+/* line 713, D:/personal/juauzcom/scss/scss.scss */
+.case-content {
+  display: block;
+}
+
+/* line 717, D:/personal/juauzcom/scss/scss.scss */
+.case-description {
+  width: 200px;
+  display: block;
+  opacity: 1;
+  color: #162BF4;
+  font-size: 12px;
+  margin-bottom: 4px;
+  padding: 1px 1px;
+  border: 1px solid #FFEFE5;
+}
+
+/* line 728, D:/personal/juauzcom/scss/scss.scss */
+.open-on {
+  width: 122px;
+  padding: 1px 1px;
+  background-color: #162BF4;
+  color: #fff;
+  display: block;
+}
+
+/* line 736, D:/personal/juauzcom/scss/scss.scss */
+#casestudy1,
+#casestudy2 {
+  margin-bottom: 30px;
+}
+
+/* line 741, D:/personal/juauzcom/scss/scss.scss */
+.full-fucking-width {
+  height: 500px;
+}
+
+@media screen and (min-width: 1980px) {
+  /* line 741, D:/personal/juauzcom/scss/scss.scss */
+  .full-fucking-width {
+    height: auto;
+  }
+}
+
+/* line 749, D:/personal/juauzcom/scss/scss.scss */
+.hide {
+  display: none;
+}
+
+/* line 753, D:/personal/juauzcom/scss/scss.scss */
+.show {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=../css/scss.map */
